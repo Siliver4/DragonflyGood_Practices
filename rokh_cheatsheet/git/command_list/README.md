@@ -6,8 +6,15 @@ Créer une branche de featureA :
 git checkout -b featureA
 
 Créer une branche de featureA basé sur une branche initiale :
-git checkout -b featureA branchInit
-=> featureA commencera là ou se trouve le dernier commit de branchInit
+git checkout -b featureA brancheInitiale
+=> featureA commencera là ou se trouve le dernier commit de 'brancheInitiale'.
+
+Créer une branche de featureA basé sur un commit initial :
+git checkout -b featureA commitInitial
+=> featureA commencera à partir du commit 'commitInitial'.
+
+Créer une branche de featureA basé sur une commit initial (ici le commit SHA1 : 8da3459) et qui track un remote 'origin/featureA' :
+git checkout -b featureA --track origin/featureA 8da3459
 
 Mettre en place le remote de notre branche de feature featureA (pour pouvoir push) :
 git push --set-upstream origin featureA

@@ -40,8 +40,8 @@ git branch -D brancheB
 bye bye brancheB
 git reflog
 On retrouve le SHA1 du commit voulu (ici 8da3459) et on fait :
-git branch brancheB 8da3459
-Ce qui va recréer la branche brancheB à partir du commit 8da3459
+git checkout -b brancheB --track origin/brancheB 8da3459
+Ce qui va recréer la branche brancheB à partir du commit 8da3459 et utiliser la remote 'origin/brancheB' encore en place.
 
 NB : bon c'est bien gentil, mais si on a juste supprimé la branche locale,
 il suffit de faire un git branch brancheB et git s'occupe de nous créer la branche ainsi que 
