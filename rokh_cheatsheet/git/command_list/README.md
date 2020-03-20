@@ -4,6 +4,22 @@ ___
   Liste des commandes principales git :
 </h3>
 
+**Sommaire :**
+
+> [Gestion des branches](#--alors-ça-te-branche-)
+> 
+> [Gestion des merges](#--merge-moi-si-tu-peux--)
+> 
+> [Gestion des rebases](#--rebase-moi-si-tu-veux-o)
+> 
+> [Gestion des commits](#--commit-moi-tout-partout)
+> 
+> [Gestion des erreur de commit](#--un-commit-un-peu-trop-rapide)
+> 
+> [Gestion des stash](#--le-coucou-stach-stach)
+> 
+> [Gestion des informations / logs](#--linformation-est-source-de-pouvoir-)
+
 ___
 
 <h4 align="center">
@@ -78,9 +94,9 @@ ___
 
 # Aller sur la branche master qui est la branche dont on veut se baser :
   git checkout master
-# Rebaser à partir de master sur la branche feature featureA (ordre de lecture de la commande suivante) :
-# NB: la commande précédente nous place sur la branche featureA
-# NB2: la commande précédente rebase le local, mais pas le remote de featureA
+# Rebaser à partir de master sur la branche featureA (c'est l'ordre de lecture de la commande) :
+# NB: la commande nous place sur la branche featureA
+# NB2: la commande rebase le local, mais pas le remote de featureA
   git rebase master featureA
 # On met à jour le remote de featureA :
   git push -f
@@ -108,7 +124,7 @@ ___
 ___
 
 <h4 align="center">
-  Un commit peu trop rapide...
+  Un commit un peu trop rapide...
 </h4>
 
 ```shell
@@ -180,8 +196,10 @@ ___
   git log
 # Afficher les différences entre les branches locale et remote :
   git diff
-# Afficher le statut actuelle du repo :
+# Afficher le statut actuelle du repo (les fichiers modifiés OU les répertoires) :
   git status
+# Afficher le statut actuelle du repo (les fichiers modifiés ET les répertoires) :
+  git status -u
 # Afficher les derniers emplacements de notre HEAD :
   git reflog
 ```
