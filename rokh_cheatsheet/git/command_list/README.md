@@ -1,8 +1,11 @@
-___
-
 <h3 align="center">
   Liste des commandes principales git :
 </h3>
+
+___
+
+</br>
+</br>
 
 **Sommaire :**
 
@@ -133,7 +136,7 @@ ___
 # Unstage tout son travail :
   git reset HEAD
 # Pour reprendre le travail du dernier commit :
-  git revert HEAD^
+  git reset HEAD^
 (ou)
   git reset --soft HEAD~1
 # Supprimer un commit en local (on annule ici le dernier commit réalisé) :
@@ -178,10 +181,10 @@ ___
 # Créer une branche à partir d'un stash (prend le dernier stash créé) :
   git stash branch
 # (ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
-  git stash branch <name> stash@{0}
+  git stash branch brancheB stash@{0}
 # Supprimer le stash d'index 0, affiché par la commande 'git stash list' :
   git stash drop stash@{0}
-# Supprimer tout les stash du repo :
+# Supprimer tous les stash du repo :
   git stash clear
 ```
 
