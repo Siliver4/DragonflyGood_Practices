@@ -2,8 +2,6 @@
   Liste des commandes principales git :
 </h3>
 
-___
-
 </br>
 </br>
 
@@ -17,7 +15,7 @@ ___
 > 
 > [Gestion des commits](#--commit-moi-tout-partout)
 > 
-> [Gestion des erreur de commit](#--un-commit-un-peu-trop-rapide)
+> [Gestion des erreurs de commit](#--un-commit-un-peu-trop-rapide)
 > 
 > [Gestion des stash](#--le-coucou-stach-stach)
 > 
@@ -33,15 +31,15 @@ ___
 # Créer une branche de featureA :
   git checkout -b featureA
 
-# Créer une branche de featureA basé sur une branche initiale :
+# Créer une branche de featureA basée sur une branche initiale :
 # NB: featureA commencera là ou se trouve le dernier commit de 'brancheInitiale'.
   git checkout -b featureA brancheInitiale
 
-# Créer une branche de featureA basé sur un commit initial :
+# Créer une branche de featureA basée sur un commit initial :
 # NB: featureA commencera à partir du commit 'commitInitial'.
   git checkout -b featureA commitInitial
 
-# Créer une branche de featureA basé sur une commit initial (ici le commit SHA1 : 8da3459) 
+# Créer une branche de featureA basée sur une commit initial (ici le commit SHA1 : 8da3459) 
 # et qui track un remote 'origin/featureA' (doit être fait en deux commandes) :
   git checkout -b featureA 8da3459
   git branch --set-upstream-to=origin/featureA featureA
@@ -92,7 +90,7 @@ ___
 </h4>
 
 ```shell
-### Rebase une de feature à partir de master :
+### Rebase une feature à partir de master :
 ### Suivre le process suivant :
 
 # Aller sur la branche master qui est la branche dont on veut se baser :
@@ -112,16 +110,14 @@ ___
 </h4>
 
 ```shell
----  -----------------------
 # Stage tout son travail :
   git add -A
 # Commit son travail avec un message synthétique et clair < 70 caractères :
   git commit -m "mon message de commit"
-# Vérifier que l'on est à jour avec le remote :
+# Se mettre à jour avec le remote :
   git pull
 # Pusher son travail sur le remote :
   git push
-
 ```
 
 ___
@@ -135,17 +131,17 @@ ___
   git reset NomDuFichier
 # Unstage tout son travail :
   git reset HEAD
-# Pour reprendre le travail du dernier commit :
+# Reprendre le travail du dernier commit :
   git reset HEAD^
 (ou)
   git reset --soft HEAD~1
-# Supprimer un commit en local (on annule ici le dernier commit réalisé) :
+# Supprimer un commit en local (on supprime le dernier commit réalisé) :
   git reset --hard HEAD~1
 # Annuler un commit en remote == créer un commit inverse (vu que l'on est plusieurs sur un 
 # projet, la règle c'est de faire un revert pour annuler proprement son commit) :
   git revert SHA_duCommit
-# Commit son travail avec un message en plusieurs paragraphe :
-  git commit -m "mon message de commit" -m "mon second paragraphe de commit"
+# Commit son travail avec un message en plusieurs paragraphes :
+  git commit -m "mon message de commit" -m "mon second paragraphe de commit" -m "3ème..."
 # Modifier le message du dernier commit :
   git commit --amend
 # Annuler les modifications effectuées sur un fichier fichierA :
@@ -176,11 +172,11 @@ ___
   git stash show -p
 # Réappliquer notre stash et reprendre le travail dessus (prend le dernier stash créé) :
   git stash pop
-# (ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
+(ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
   git stash pop stash@{0}
 # Créer une branche à partir d'un stash (prend le dernier stash créé) :
   git stash branch
-# (ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
+(ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
   git stash branch brancheB stash@{0}
 # Supprimer le stash d'index 0, affiché par la commande 'git stash list' :
   git stash drop stash@{0}
@@ -195,7 +191,7 @@ ___
 </h4>
 
 ```shell
-# Afficher les logs des derniers commits :
+# Afficher les logs de tous les commits (ordre antéchronologique):
   git log
 # Afficher les différences entre les branches locale et remote :
   git diff
