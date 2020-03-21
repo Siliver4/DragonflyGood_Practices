@@ -15,7 +15,7 @@
 > 
 > [Gestion des commits](#--commit-moi-tout-partout)
 > 
-> [Gestion des erreurs de commit](#--un-commit-un-peu-trop-rapide)
+> [Gestion des erreurs de commit](#--un-commit-un-peu-trop-rapide-_ツ_)
 > 
 > [Gestion des stash](#--le-coucou-stach-stach)
 > 
@@ -123,7 +123,7 @@ ___
 ___
 
 <h4 align="center">
-  Un commit un peu trop rapide...
+  Un commit un peu trop rapide. ¯\_(ツ)_/¯
 </h4>
 
 ```shell
