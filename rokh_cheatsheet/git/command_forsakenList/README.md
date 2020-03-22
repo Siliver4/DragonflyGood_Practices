@@ -15,10 +15,10 @@
 
 ___
 
-Il peut nous arriver, en tant que développeurs d'être étourdi, si si... ¯\_(ツ)_/¯
+Il peut nous arriver, en tant que développeurs d'être étourdi, si si...  ¯\\\_(ツ)_/¯
 
-Et dans de tels moments il nous faut trouver des solutions pour annuler 
-le fait d'avoir lancé telle ou telle commande sur git !
+Il nous faut alors trouver des solutions pour annuler le fait d'avoir lancé telle ou 
+telle commande sur git !
 
 <h4 align="center">
    Behold the reflog \o/
