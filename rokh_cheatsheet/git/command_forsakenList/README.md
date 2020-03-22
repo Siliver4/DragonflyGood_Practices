@@ -13,8 +13,10 @@
 >
 > [Annuler un `git reset --hard`](#--git-reset---hard)
 
+___
 
-Il peut arriver pour nous développeurs d'être étourdi, si si... ¯\_(ツ)_/¯
+Il peut nous arriver, en tant que développeurs d'être étourdi, si si... ¯\_(ツ)_/¯
+
 Et dans de tels moments il nous faut trouver des solutions pour annuler 
 le fait d'avoir lancé telle ou telle commande sur git !
 
@@ -31,7 +33,7 @@ Pour annuler les actions suivantes :
 On utilise la commande `git reflog` !
 La commande `git reflog` nous donne accès aux derniers emplacements de notre HEAD, 
 et c'est là que ça devient génial ! Les actions précédentes ont laissées une trace.
-Rien n'est perdu sur git, donc plus aucune peur à avoir !
+Rien n'est perdu sur git, donc plus aucune raison d'avoir peur désormais avec git !
 
 Voyons ça en détail :
 
@@ -50,8 +52,8 @@ ___
 # On doit alors faire :
 git reflog
 # On y retrouve le SHA1 du commit voulu (ici 8da3459) puis on fait :
-`git reset --hard 8da3459`
-# et hop hop ni vu ni connu j'tenbrouille ;)
+git reset --hard 8da3459
+# ...et hop hop ni vu ni connu j'tenbrouille ;)
 ```
 
 ___
@@ -68,7 +70,7 @@ ___
 ###    => Donc on va juste recréer une branche à partir de ce commit là.
 
 git branch -D brancheB
-# bye bye brancheB
+# Bye bye brancheB :'(
 git reflog
 # On retrouve le SHA1 du commit voulu (ici 8da3459) puis on devrait faire :
 git checkout -b brancheB --track origin/brancheB 8da3459
@@ -100,10 +102,10 @@ ___
 # commande reflog. Donc il suffit d'utiliser cette même méthode `git reset --hard` pour 
 # annuler la commande `git reset --hard`. 
 # Prenons l'exemple suivant, on souhaite supprimer le dernier commit en local :
-`git reset --hard HEAD~1`
-# on souhaite finalement retrouver ce commit :
-`git reflog`
+git reset --hard HEAD~1
+# On souhaite finalement retrouver ce commit :
+git reflog
 # On retrouve le SHA1 du commit voulu (ici 8da3459) et on fait :
-`git reset --hard 8da3459`
-# magestic ! on vient de reset hard le reset hard ! :o 
+git reset --hard 8da3459
+# Magestic ! on vient de reset hard le reset hard ! :o 
 ```
