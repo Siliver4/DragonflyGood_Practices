@@ -172,11 +172,11 @@ ___
   git stash show -p
 # Réappliquer notre stash et reprendre le travail dessus (prend le dernier stash créé) :
   git stash pop
-(ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
+# (ou) Si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
   git stash pop stash@{0}
 # Créer une branche à partir d'un stash (prend le dernier stash créé) :
   git stash branch
-(ou) si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
+# (ou) Si on a plusieurs stash, en remplaçant 0 par l'index affiché par la commande 'git stash list' :
   git stash branch brancheB stash@{0}
 # Supprimer le stash d'index 0, affiché par la commande 'git stash list' :
   git stash drop stash@{0}
