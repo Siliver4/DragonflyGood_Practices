@@ -7,17 +7,17 @@
 
 **Sommaire :**
 
-> [Introduction](#-)
+> [Introduction](#--introduction)
 > 
-> [Configuration de Git](#-)
+> [Configuration de Git](#--configuration-de-git)
 > 
-> [Détails des paramètres du .gitconfig](#-)
+> [Détails des paramètres du .gitconfig](#--détails-des-paramètres-du-gitconfig)
 > 
-> [Bonnes pratiques](#-)
+> [Bonnes pratiques](#--bonnes-pratiques)
 > 
-> [Security & SSH](#-)
+> [Security & SSH](#--security--ssh)
 > 
-> [DON'T TRY THIS AT HOME](#-)
+> [DON'T TRY THIS AT HOME](#--dont-try-this-at-home)
 
 ___
 
@@ -66,12 +66,12 @@ Une configuration de base de ce fichier serai :
 
 MON_ADRESSE_MAIL : votre adresse mail entre guillemet.
 </br>
-ex : `dragonflygoodpractice@gmail.com`
+ex : `"dragonflygoodpractice@gmail.com"`
 
 MON_PSEUDO_GIT : votre pseudo git, entre guillemet si vous voulez utiliser des espaces, 
 sinon les guillements sont facultatifs.
 </br>
-ex : `The Rokh`
+ex : `"The Rokh"`
 
 On peut également utiliser les commandes suivantes 
 afin d'éditer directement le fichier `.gitconfig` :
@@ -80,7 +80,7 @@ afin d'éditer directement le fichier `.gitconfig` :
 </br>
 `git config --global user.name "The Rokh"`
 </br>
-`git config --global push.default matching`
+`git config --global push.default simple`
 </br>
 `git config --global pull.rebase preserve`
 
