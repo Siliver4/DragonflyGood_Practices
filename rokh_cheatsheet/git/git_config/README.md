@@ -77,13 +77,13 @@ Sauter des lignes permet de suivre le process suivant :
 
 Enfin on peut noter que l'on ne peut pas afficher proprement les listes à point, comme dans un fichier markdown, mais que le fait d'utiliser des tirets '-' est une bonne pratique pour rendre le commit lisible et vraiment bien détaillé.
 
-<h4 align="center">
+<h2 align="center">
     <br>
       Exemple de rendu visuel dans l'historique de github.com
     <br>
     <br>
       <a href="https://raw.githubusercontent.com/Siliver4/DragonflyGood_Practices/master/assets/img/git/commit_template/commit_template_github_view2.png">
-        <img src="DragonflyGood_Practices/master/assets/img/git/commit_template/commit_template_github_view2.png" alt="DragonflyGood_Practices_commit_template_github_view2" width="547">
+        <img src="DragonflyGood_Practices/master/assets/img/git/commit_template/commit_template_github_view2.png" alt="DragonflyGood_Practices_commit_template_github_view2" width="747">
       </a>
     <br>
-</h4>
+</h2>
