@@ -73,8 +73,7 @@ sinon les guillements sont facultatifs.
 </br>
 ex : `"The Rokh"`
 
-On peut également utiliser les commandes suivantes 
-afin d'éditer directement le fichier `.gitconfig` :
+On peut également utiliser les commandes suivantes afin d'éditer directement le fichier `.gitconfig` :
 </br>
 `git config --global user.email "dragonflygoodpractice@gmail.com"`
 </br>
