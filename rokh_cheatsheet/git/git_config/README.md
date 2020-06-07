@@ -16,7 +16,7 @@ ___
 </h4>
 
 Pour les puristes, il est préférable d'utiliser un template lorsque l'on commit, afin que toute l'équipe
-respecte le même pattern et/ou règle adjacente pour garder une certaine cohérence dans les commits. 
+respecte le même pattern et/ou règles adjacentes pour garder une certaine cohérence dans les commits. 
 Pour cela on va définir un fichier de template, ainsi que l'éditeur de texte que l'on va utiliser pour 
 rédiger le message. On pourra par exemple utiliser 'gedit', ou bien 'sublimetext', mais certainement pas de vi/vim/nano je vous prie, on est plus à l'âge de pierre de l'informatique !
 
@@ -69,15 +69,16 @@ Problem 47: description
 # #############################################################
 ```
 
-Les lignes qui commence par un `#` ne seront pas conservée dans le message du commit. Noter que les tailles que je donne ici pour le titre et le contenu sont parfaitement adapté, mais si par contre vous souhaitez rajouter des détails, comme par exemple une liste à point, afin de reprendre plus précisément les modifications que vous avez faites. Alors il convient de sauter une ligne dans ce fichier et d'écrire ces informations comme dans cet exemple-ci là où j'ai mis "Solution * Add a column ...".
+Les lignes qui commence par un `#` ne seront pas conservée dans le message du commit. Noter que les tailles que je donne ici pour le titre et le contenu sont parfaitement adapté, mais si par contre vous souhaitez rajouter des détails, comme par exemple une liste à point, afin de reprendre plus précisément les modifications que vous avez faites. Alors il convient de sauter une ligne dans ce fichier et d'écrire ces informations comme dans cet exemple-ci là où j'ai mis "Solution - Add a column ...".
 
 Sauter des lignes permet de suivre le process suivant :
-1ère ligne : le titre de votre commit (doit faire 50 caractères max sinon il va être coupé par des '...' et passer dans le champ suivant 'détail' ce qui rend le message de commit pas terrible)
-2ème ligne : le détail, essayer au mieux de faire des lignes de 72 caractères max pour garder une lisibilité optimale.
+<br>
+- 1ère ligne : le titre de votre commit (doit faire 50 caractères max sinon il va être coupé par des '...' et passer dans le champ suivant 'détail' ce qui peut rendre le message de commit incomplet).
+- 2ème ligne : le détail, essayez au mieux de faire des lignes de 72 caractères max pour garder une lisibilité optimale.
 
 Enfin on peut noter que l'on ne peut pas afficher proprement les listes à point, comme dans un fichier markdown, mais que le fait d'utiliser des tirets '-' est une bonne pratique pour rendre le commit lisible et vraiment bien détaillé.
 
-<h2 align="center">
+<h4 align="center">
     <br>
       Exemple de rendu visuel dans l'historique de github.com
     <br>
@@ -86,4 +87,4 @@ Enfin on peut noter que l'on ne peut pas afficher proprement les listes à point
         <img src="/assets/img/git/commit_template/commit_template_github_view2.png" alt="DragonflyGood_Practices_commit_template_github_view2">
       </a>
     <br>
-</h2>
+</h4>
