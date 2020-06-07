@@ -45,16 +45,16 @@ On peut également utiliser les commandes suivantes afin d'éditer directement l
 </h5>
 
 ```
-# main subject - 50 characters
+# main subject - 72 characters
 Problem 47: description
-# details - 72 characters
+# details - no characters limits
 
 
 # #############################################################
 # classic example :
-#   # main subject - 50 characters
+#   # main subject - 72 characters
 #   commiting like a true git purist
-#   # details - 72 characters
+#   # details - no characters limits
 #   Problem
 #   We do need a database query to get only rokh's great deeds
 #   
@@ -73,10 +73,8 @@ Les lignes qui commence par un `#` ne seront pas conservée dans le message du c
 
 Sauter des lignes permet de suivre le process suivant :
 <br>
-- 1ère ligne : le titre de votre commit (doit faire 50 caractères max sinon il va être coupé par des '...' et passer dans le champ suivant 'détail' ce qui peut rendre le message de commit incomplet).
-- 2ème ligne : le détail, essayez au mieux de faire des lignes de 72 caractères max pour garder une lisibilité optimale.
-
-Enfin on peut noter que l'on ne peut pas afficher proprement les listes à point, comme dans un fichier markdown, mais que le fait d'utiliser des tirets '-' est une bonne pratique pour rendre le commit lisible et vraiment bien détaillé.
+- 1ère ligne : le titre de votre commit, un bon titre de commit doit être le plus court et le plus explicite possible. Le titre doit faire 72 caractères maximum sinon il va être coupé par des '...' et ce qui dépasse va passer dans le champ suivant 'détail' ce qui peut rendre le message de commit incomplet au premier regard. 
+- 2ème, 3ème, ... ligne(s) : le détail, cette partie sert à préciser point par point ce qui a été rajouté/modifié par le commit. C'est une très bonne pratique afin de donner d'avantage d'information sur ce qui a été fait, plutôt que de devoir relire le code directement. Utiliser des tirets '-' est une bonne pratique pour rendre le commit lisible & bien détaillé.
 
 <h4 align="center">
     <br>
