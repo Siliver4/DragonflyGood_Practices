@@ -57,7 +57,7 @@ public class Train_HelperClasses {
         // http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/ArrayUtils.html
 
         // ======= ArrayUtils constants ================================================================================
-        // ArrayUtils. none are really useful
+        // ArrayUtils, none are really useful
 
         // ======= ArrayUtils functions ================================================================================
         // ArrayUtils.clone() : clones an array returning a typecast result and handling null.
@@ -75,8 +75,45 @@ public class Train_HelperClasses {
         }
 
         // ======= org.apache.commons.collections4.CollectionUtils =====================================================
-        // to come ...
+        // https://commons.apache.org/proper/commons-collections/apidocs/org/apache/commons/collections4/CollectionUtils.html
 
+        // ======= CollectionUtils constants ===========================================================================
+        // CollectionUtils, none are really useful
+
+        // ======= CollectionUtils functions ===========================================================================
+        // CollectionUtils.addAll(Collection<C> collection, C... elements) :
+        //     Adds all elements in the array to the given collection.
+        // CollectionUtils.collect(Iterable<? extends I> inputCollection, Transformer<? super I,? extends O> transformer, R outputCollection) :
+        //     Transforms all elements from input collection with the given transformer and adds them to the output collection.
+        // CollectionUtils.filter(Iterable<T> collection, Predicate<? super T> predicate) :
+        //     Filter the collection by applying a Predicate to each element. Remove element if false.
+        // CollectionUtils.filterInverse(Iterable<T> collection, Predicate<? super T> predicate) :
+        //     Filter the collection by applying a Predicate to each element. Remove element if true.
+        //
+        // JOIN, INTERSECTION, UNION, MINUS, DISJUNCTION
+        //
+        // CollectionUtils.collate(Iterable<? extends O> a, Iterable<? extends O> b, boolean includeDuplicates) :
+        //     Merges two sorted Collections, a and b, into a single, sorted List such that the natural ordering of the
+        //     elements is retained.
+        // CollectionUtils.intersection(Iterable<? extends O> a, Iterable<? extends O> b) :
+        //     Returns a Collection containing the intersection of the given Iterables.
+        // CollectionUtils.union(Iterable<? extends O> a, Iterable<? extends O> b) :
+        //     Returns a Collection containing the union of the given Iterables.
+        // CollectionUtils.subtract(Iterable<? extends O> a, Iterable<? extends O> b, Predicate<O> p) :
+        //     Returns a new Collection containing a minus a subset of b.
+        // CollectionUtils.disjunction(Iterable<? extends O> a, Iterable<? extends O> b) :
+        //     Returns a Collection containing the exclusive disjunction (symmetric difference) of the given Iterables.
+        //
+        // allow to check :
+        //     get(Object object, int index)
+        //     isEmpty(Collection<?> collection)
+        //     isNotEmpty(Collection<?> collection)
+        //     isSubCollection(Collection<?> a, Collection<?> b)
+        //     containsAll(Collection<?> coll1, Collection<?> coll2)
+        //     containsAny(Collection<?> coll1, Collection<?> coll2)
+        //     isEqualCollection(Collection<?> a, Collection<?> b)
+
+        // example : ... TODO
     }
 
     public static void print(String s) {
