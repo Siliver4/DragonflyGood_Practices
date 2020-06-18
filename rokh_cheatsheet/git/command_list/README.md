@@ -86,6 +86,33 @@ ___
 ___
 
 <h4 align="center">
+  Un conflit de canard ce n'est pas ce que l'on aime manger :/ 
+</h4>
+
+```shell
+### Parfois un tentative de merge peut entraîner des conflits :
+### Pour les régler, suivre le process suivant :
+
+# OAller sur la branche featureA et lister les fichiers à corriger :
+  git checkout featureA
+  git status
+# Dans chaque fichier listé git nous a créé le pattern suivant :
+<<<<<<< HEAD
+lignes en conflits : ici se trouve celles du fichier sur la branche master
+=======
+lignes en conflits : ici se trouve celles du fichier sur la branche featureA
+>>>>>>> featureA
+# On garde au choix, le premier, le second ou bien les deux, ou encore un mixte des deux modifiés 
+# à la mano si on a vraiment un conflit avancée. Puis dès que tous les fichiers sont corrigés, il 
+# nous suffit de créer le commit marquant la résolution des conflits :
+git add -A
+git commit -m "Resolving merge conflict"
+git push
+```
+
+___
+
+<h4 align="center">
   Rebase moi si tu veux :o
 </h4>
 
@@ -99,7 +126,7 @@ ___
 # NB: la commande nous place sur la branche featureA
 # NB2: la commande rebase le local, mais pas le remote de featureA
   git rebase master featureA
-# On met à jour le remote de featureA :
+# On met à jour le remote de featureA (-f car on doit remplacer son historique de commit par le nouveau) :
   git push -f
 ```
 
