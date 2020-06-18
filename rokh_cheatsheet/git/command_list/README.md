@@ -9,9 +9,11 @@
 
 > [Gestion des branches](#--alors-ça-te-branche-)
 > 
+> [Gestion des rebases](#--rebase-moi-si-tu-veux-o)
+>
 > [Gestion des merges](#--merge-moi-si-tu-peux--)
 > 
-> [Gestion des rebases](#--rebase-moi-si-tu-veux-o)
+> [Gestion des conflits](#--un-conflit-de-canard-on-nen-raffole-pas-tant-que-ça--)
 > 
 > [Gestion des commits](#--commit-moi-tout-partout)
 > 
@@ -67,6 +69,26 @@ ___
 ___
 
 <h4 align="center">
+  Rebase moi si tu veux :o
+</h4>
+
+```shell
+### Rebase une feature à partir de master :
+### Suivre le process suivant :
+
+# Aller sur la branche master qui est la branche dont on veut se baser :
+  git checkout master
+# Rebaser à partir de master sur la branche featureA (c'est l'ordre de lecture de la commande) :
+# NB: la commande nous place sur la branche featureA
+# NB2: la commande rebase le local, mais pas le remote de featureA
+  git rebase master featureA
+# On met à jour le remote de featureA (-f car on doit remplacer son historique de commit par le nouveau) :
+  git push -f
+```
+
+___
+
+<h4 align="center">
   Merge moi si tu peux ;) 
 </h4>
 
@@ -86,48 +108,31 @@ ___
 ___
 
 <h4 align="center">
-  Un conflit de canard ce n'est pas ce que l'on aime manger :/ 
+  Un conflit de canard on n'en raffole pas tant que ça :/ 
 </h4>
 
 ```shell
 ### Parfois un tentative de merge peut entraîner des conflits :
-### Pour les régler, suivre le process suivant :
+### Pour éviter les conflits au maximum, penser à faire un rebase avant de faire le merge :o
+### Pour régler les conflits, suivre le process suivant :
 
-# OAller sur la branche featureA et lister les fichiers à corriger :
+# Aller sur la branche featureA et lister les fichiers à corriger :
   git checkout featureA
   git status
 # Dans chaque fichier listé git nous a créé le pattern suivant :
-<<<<<<< HEAD
-lignes en conflits : ici se trouve celles du fichier sur la branche master
-=======
-lignes en conflits : ici se trouve celles du fichier sur la branche featureA
->>>>>>> featureA
+# 
+# <<<<<<< HEAD
+# lignes en conflits : ici se trouve celles du fichier sur la branche master
+# =======
+# lignes en conflits : ici se trouve celles du fichier sur la branche featureA
+# >>>>>>> featureA
+# 
 # On garde au choix, le premier, le second ou bien les deux, ou encore un mixte des deux modifiés 
 # à la mano si on a vraiment un conflit avancée. Puis dès que tous les fichiers sont corrigés, il 
 # nous suffit de créer le commit marquant la résolution des conflits :
 git add -A
 git commit -m "Resolving merge conflict"
 git push
-```
-
-___
-
-<h4 align="center">
-  Rebase moi si tu veux :o
-</h4>
-
-```shell
-### Rebase une feature à partir de master :
-### Suivre le process suivant :
-
-# Aller sur la branche master qui est la branche dont on veut se baser :
-  git checkout master
-# Rebaser à partir de master sur la branche featureA (c'est l'ordre de lecture de la commande) :
-# NB: la commande nous place sur la branche featureA
-# NB2: la commande rebase le local, mais pas le remote de featureA
-  git rebase master featureA
-# On met à jour le remote de featureA (-f car on doit remplacer son historique de commit par le nouveau) :
-  git push -f
 ```
 
 ___
