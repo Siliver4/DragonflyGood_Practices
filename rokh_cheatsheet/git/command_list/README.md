@@ -34,7 +34,7 @@ ___
   git checkout -b featureA
 
 # Créer une branche de featureA basée sur une branche initiale :
-# NB: featureA commencera là ou se trouve le dernier commit de 'brancheInitiale'.
+# NB: featureA commencera là où se trouve le dernier commit de 'brancheInitiale'.
   git checkout -b featureA brancheInitiale
 
 # Créer une branche de featureA basée sur un commit initial :
@@ -144,7 +144,7 @@ ___
 ```shell
 # Stage tout son travail :
   git add -A
-# Commit son travail avec un message synthétique et clair < 70 caractères :
+# Commit son travail avec un message synthétique et clair de moins de 70 caractères :
   git commit -m "mon message de commit"
 # Se mettre à jour avec le remote :
   git pull
@@ -165,7 +165,7 @@ ___
   git reset HEAD
 # Reprendre le travail du dernier commit :
   git reset HEAD^
-(ou)
+# (ou)
   git reset --soft HEAD~1
 # Supprimer un commit en local (on supprime le dernier commit réalisé) :
   git reset --hard HEAD~1
@@ -227,9 +227,9 @@ ___
   git log
 # Afficher les différences entre les branches locale et remote :
   git diff
-# Afficher le statut actuelle du repo (les fichiers modifiés OU les répertoires) :
+# Afficher le statut actuel du repo (les fichiers modifiés OU les répertoires) :
   git status
-# Afficher le statut actuelle du repo (les fichiers modifiés ET les répertoires) :
+# Afficher le statut actuel du repo (les fichiers modifiés ET les répertoires) :
   git status -u
 # Afficher les derniers emplacements de notre HEAD :
   git reflog
