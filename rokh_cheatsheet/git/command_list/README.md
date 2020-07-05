@@ -112,7 +112,7 @@ ___
 </h4>
 
 ```shell
-### Parfois un tentative de merge peut entraîner des conflits :
+### Parfois une tentative de merge peut entraîner des conflits :
 ### Pour éviter les conflits au maximum, penser à faire un rebase avant de faire le merge :o
 ### Pour régler les conflits, suivre le process suivant :
 
@@ -133,6 +133,12 @@ ___
 git add -A
 git commit -m "Resolving merge conflict"
 git push
+
+### Parfois une tentative de rebase peut entraîner des conflits :
+### Le process est le même, si ce n'est que l'on n'a pas besoin de faire un commit.
+### Une fois les fichiers en conflit gérés, il suffit de faire un :
+  git rebase --continue
+### Le conflit est bien géré, et le rebase se termine comme prévu.
 ```
 
 ___
