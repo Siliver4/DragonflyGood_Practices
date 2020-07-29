@@ -9,7 +9,7 @@
 
 > [Introduction](#--introduction)
 > 
-> [Les deux écoles](#--les-deux-écoles-)
+> [Les deux écoles](#--les-deux-écoles)
 > 
 > [Test unitaire classique](#--cas-classique-)
 >
