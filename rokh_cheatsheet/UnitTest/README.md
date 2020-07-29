@@ -9,7 +9,7 @@
 
 > [Introduction](#--introduction)
 > 
-> [Introduction](#--les-deux-écoles-)
+> [Les deux écoles](#--les-deux-écoles-)
 > 
 > [Test unitaire classique](#--cas-classique-)
 >
@@ -38,25 +38,29 @@ on pourra notamment utiliser Jacoco, allez c'est parti mon coco !
 
 ___
 
-<h4 align="left">
-  Les deux écoles :
+<h4 align="center">
+  Les deux écoles
 </h4>
 
-<h5 align="left" style="text-decoration:underline;">
+<h4 align="left" style="text-decoration:underline;">
   Le test unitaire que j'ai appris à l'école :
-</h5>
+</h4>
 Le but est de valider tous les chemins que le code peut réaliser, et que dans tous les 
 cas le résultat obtenu soit celui spécifié (valeur retournée ou exception levée).<br/><br/>
+
+```
 ○ 1) on test de manière atomique le code, cela revient à créer une 
 méthode de test par 'chemin' dans une fonction. On doit absolument tout tester, à 
 savoir les cas nominaux, les cas d'erreurs, les cas d'exceptions, et enfin en testant 
-avec des paramètres vides ou null. Une méthode par chemin.<br/>
-○ 2) on ne test pas directement les méthodes privées, car puisqu'elles sont privées, 
+avec des paramètres vides ou null. Une méthode par chemin.
+
+○ 2) on ne test pas directement une méthode privée, car puisqu'elle est privée, 
 il s'agît d'un comportement purement interne à une classe. Personne ne va jamais 
 appeler cette méthode privée directement et s'attendre à un résultat précis.
 Au lieu de cela il convient de tester les fonctions publiques uniquement. Si les méthodes 
 publiques appellent des méthodes privées et fonctionnent comme on le souhaite, alors 
-par extension les fonctions privées fonctionnement correctement.<br/>
+par extension les fonctions privées fonctionnement correctement.
+```
 
 <br/>
 
@@ -65,24 +69,30 @@ il faut donc valider à que chaque méthode fait ce qu'elle doit faire, et égal
 penser de manière programmation défensive en vérifiant systématiquement les paramètres 
 que l'on a en entrée.
 
-<h5 align="left" style="text-decoration:underline;">
+___
+
+<h4 align="left" style="text-decoration:underline;">
   Le test unitaire en entreprise :
-</h5>
+</h4>
 Le but est de se protéger en cas de refacto du code dans le futur. Si dans 3 mois, je 
 modifie le comportement d'une méthode, potentiellement utilisée autre part dans le code, 
 alors je risque de casser le bon fonctionnement de l'application dans chaque endroit où 
 cette méthode est appelée. <br/><br/>
+
+```
 ○ 1) on doit donc créer un jeu de test qui vérifie que l'on réalise bien les appels aux 
 méthodes voulu et que les résultats dans chaque méthode soient ceux attendus et ce à 
 chaque étapes afin d'en créer une sorte de moule géant. Une méthode par chemin. 
 Ainsi si demain je modifie le code, je vais nécessairement casser la forme originel 
 de mon moule (mes jeux de tests), et donc potentiellement entraîner des régressions, 
 d'où le besoin de faire ces jeux de tests. Je n'appelerai pas cela des tests unitaires, 
-mais plutôt un moule refacto-préventif hihi :P.<br/>
+mais plutôt un moule refacto-préventif hihi :P.
+
 ○ 2) on doit mocker nos appels, car on travaille généralement sur des services de haut 
 niveau (appel BDD, appel service REST distant, ...) et on ne peut se permettre de 
 dépendre de l'existance d'un tier pour valider et confirmer le bon fonctionnement d'une 
-des unités que nous avons mis en place.<br/>
+des unités que nous avons mis en place.
+```
 
 <br/>
 
