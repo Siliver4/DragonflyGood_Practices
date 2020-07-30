@@ -29,7 +29,7 @@ Git est un gestionnaire de version de projet, créé par Linus Torvalds, et on p
 c'est tout simplement du génie ! Cette petite merveille fait le régale des petits, comme 
 des grands...
 
-Bien maitrisé, cette outil se révèle particulièrement puissant, et permet à un groupe de 
+Bien maitrisé, cet outil se révèle particulièrement puissant, et permet à un groupe de 
 gérer ses versions de projet, créer des tag et release pour marquer les moments clés, et 
 offre également les outils pour garder un historique de commit propre et limpide, afin 
 que toute l'équipe projet puisse travailler ensemble de la meilleur des manières qui soit,
