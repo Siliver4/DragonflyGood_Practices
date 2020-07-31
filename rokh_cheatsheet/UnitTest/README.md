@@ -101,7 +101,7 @@ sur une API WEB. On va donc mocker ce service à distance, et on va se concentre
 pas sur le fait que les deux fonctionnent bien de pair (car au final il s'agît plutôt 
 de test d'intégration), mais plutôt sur le fait de vérifier que l'on appelle bien nos 
 traitement et méthode le nombre de fois prévu, et que les modifications éventuelles 
-des données en interne ait étés prises en compte correctement.
+des données en interne aient étés prises en compte correctement.
 ___
 
 <h5 align="left">
